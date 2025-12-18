@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For My Love</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #2b133f, #3a1c5a);
+      color: #f3e9ff;
+      overflow-x: hidden;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      letter-spacing: 1px;
+    }
+
+    p {
+      max-width: 600px;
+      margin: 0 auto 2rem;
+      line-height: 1.7;
+      opacity: 0.95;
+    }
+
+    .heart {
+      font-size: 2.5rem;
+      animation: pulse 1.8s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.15); }
+      100% { transform: scale(1); }
+    }
+
+    section {
+      padding: 5rem 2rem;
+      text-align: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 2.5rem;
+      max-width: 700px;
+      margin: auto;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    }
+
+    button {
+      background: #6f3fae;
+      border: none;
+      color: white;
+      padding: 0.9rem 2rem;
+      border-radius: 30px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 1.5rem;
+    }
+
+    button:hover {
+      background: #8b5ccf;
+      transform: translateY(-3px);
+    }
+
+    .popup {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+    }
+
+    .popup-content {
+      background: #2e1747;
+      padding: 2.5rem;
+      border-radius: 20px;
+      max-width: 500px;
+      text-align: center;
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .close {
+      margin-top: 1.5rem;
+      background: transparent;
+      border: 1px solid #b48cff;
+      color: #b48cff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      opacity: 0.7;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="heart">💜</div>
+    <h1>For You, Always</h1>
+    <p>
+      Luvieeeeeee!!! Helloooooo, gusto ko lang ma appreciate ka, and what better way to show it to you by dedicating this 
+      website for you, thank you for always making me happy luvieee. Truly I feel blessed na nakilala kita and ikaw yung
+      tao na nagpapasaya saakin and pinaparamdam saakin na ang pagmamahal sayo ay napakasarap sa pakiramdam.
+    </p>
+  </div>
+</header>
+
+<section>
+  <div class="card">
+    <h2>Why You Mean Everything to Me</h2>
+    <p>
+      Pinaparamdam mo saakin na I am welcome to be myself and wag akong matakot na ipakita yung sarili ko kasi tanggap mo ko
+      for who I am. Also napakagaan ng feeling ko whenever I am talking to you na hindi ko na kailangan mag adjust para hindi 
+      mahiya, it comes in the nature na, na wag mahiya sayo kasi I always feel welcome whenever I am with you and in your 
+      presence.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>A Message Just for You</h2>
+    <p>
+      Click the email below — there’s something I’ve been wanting to tell you.
+    </p>
+    <button onclick="openPopup()">📧 Open My Heart</button>
+  </div>
+</section>
+
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <h2>My Love,</h2>
+    <p>
+      Kung ang pagmamahal pwedeng isulat sa mga salita, ikaw ang uulit-ulitin ko.
+      Pipiliin kita sa buong buhay ko na to at sa lahat ng bersyon ng aking buhay ko.
+      Salamat sa pagiging ikaw, ang pahinga ko, ang tahanan ko, ang palagi kong pipiliin.
+    </p>
+    <button class="close" onclick="closePopup()">Close</button>
+  </div>
+</div>
+
+<footer>
+  Made with all my love 💜
+</footer>
+
+<script>
+  function openPopup() {
+    document.getElementById('popup').style.display = 'flex';
+  }
+
+  function closePopup() {
+    document.getElementById('popup').style.display = 'none';
+  }
+</script>
+
+</body>
+</html>
